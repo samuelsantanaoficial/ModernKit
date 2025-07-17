@@ -1,0 +1,69 @@
+//
+
+<control>
+image=ui/wallpaper.png
+image_controls=ui/controls.png
+default_path=sounds/
+
+label_cc7=Master Vol.
+label_cc10=Master Pan
+label_cc11=Master Expr.
+
+set_cc121=64
+set_cc122=64
+set_cc124=64
+
+label_cc121=Hi-Hat Closed
+label_cc122=Hi-Hat Open
+label_cc124=Ride Cymbal
+
+<master>
+loop_mode=one_shot
+amp_veltrack=75
+
+// KICK
+<group> group=1 group_label=Kick output=0 key=36 tune=0 volume=0.00
+<region> sample=KICK-Yamaha-16x16.wav
+
+// SNARE
+<group> group=2 group_label=Snare output=1 key=38 seq_length=2 tune=0 volume=-1.51
+<region> sample=SNARE-RR1-CustomWorks-6x13.wav seq_position=1
+<region> sample=SNARE-RR2-CustomWorks-6x13.wav seq_position=2
+
+<group> group=2 group_label=Snare output=1 key=37 tune=0 volume=-1.51
+<region> sample=SIDESTICK-CustomWorks-6x13.wav
+
+// HI-HAT
+<group> group=3 group_label=ClosedHat output=2 key=42  seq_length=2 tune=0 volume=-1.72 volume_oncc121=12
+<region> sample=HIHATCLOSED-RR1-Sabian-AAX.wav seq_position=1
+<region> sample=HIHATCLOSED-RR2-Sabian-AAX.wav seq_position=2
+
+<group> group=3 group_label=ClosedHat output=2 key=44 off_by=3 tune=0 volume=-1.72
+<region> sample=HIHATPEDAL-Sabian-AAX.wav
+
+<group> group=3 group_label=OpenHat output=2 key=46 off_by=3 seq_length=2 tune=0 volume=-1.72 volume_oncc122=12
+<region> sample=HIHATOPEN-RR1-Sabian-AAX.wav seq_position=1
+<region> sample=HIHATOPEN-RR2-Sabian-AAX.wav seq_position=2
+
+// RACKTOM 1
+<group> group=4 group_label=RackTom1 output=3 key=50 seq_length=2 tune=250 volume=-2.83
+<region> sample=TOM2-RR1-StarClassic-10x10.wav seq_position=1
+<region> sample=TOM2-RR2-StarClassic-10x10.wav seq_position=2
+
+// RACKTOM 2
+<group> group=5 group_label=RackTom2 output=4 key=47 seq_length=2 tune=0 volume=-3.04
+<region> sample=TOM2-RR1-StarClassic-10x10.wav seq_position=1
+<region> sample=TOM2-RR2-StarClassic-10x10.wav seq_position=2
+
+// FLOORTOM
+<group> group=6 group_label=FloorTom output=5 key=41 seq_length=2 tune=0 volume=-2.83
+<region> sample=TOM3-RR1-StarClassic-13x13.wav seq_position=1
+<region> sample=TOM3-RR2-StarClassic-13x13.wav seq_position=2
+
+// CRASH
+<group> group=7 group_label=Crash output=6 key=57 tune=0 volume=0.00
+<region> sample=CRASH-Sabian-18.wav
+
+// RIDE
+<group> group=8 group_label=Ride output=7 key=51 tune=0 volume=0.00 volume_oncc124=12 
+<region> sample=RIDE-Robmor-Sabian-22.wav
