@@ -45,5 +45,5 @@ amp_veltrack=75
 <region> sample=CRASH-Sabian-18.wav
 
 // RIDE
-<group> group=8 group_label=Ride output=7 key=51 tune=0 volume=0.00 
+<group> group=8 group_label=Ride output=7 key=51 tune=0 volume=3.00
 <region> sample=RIDE-Robmor-Sabian-22.wav
