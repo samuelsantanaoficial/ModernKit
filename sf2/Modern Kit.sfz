@@ -1,0 +1,49 @@
+// sf2
+
+<control>
+default_path=../sounds/
+
+<master>
+loop_mode=one_shot
+amp_veltrack=75
+
+// KICK
+<group> group=1 group_label=Kick output=0 key=36 tune=0 volume=0.00
+<region> sample=KICK-Yamaha-16x16.wav
+
+// SNARE
+<group> group=2 group_label=Snare output=1 key=38 tune=0 volume=-1.51
+<region> sample=SNARE-RR1-CustomWorks-6x13.wav
+
+<group> group=2 group_label=Snare output=1 key=37 tune=0 volume=-1.51
+<region> sample=SIDESTICK-CustomWorks-6x13.wav
+
+// HI-HAT
+<group> group=3 group_label=ClosedHat output=2 key=42  tune=0 volume=-1.72
+<region> sample=HIHATCLOSED-RR1-Sabian-AAX.wav
+
+<group> group=3 group_label=ClosedHat output=2 key=44 off_by=3 tune=0 volume=-1.72
+<region> sample=HIHATPEDAL-Sabian-AAX.wav
+
+<group> group=3 group_label=OpenHat output=2 key=46 off_by=3 tune=0 volume=-1.72
+<region> sample=HIHATOPEN-RR1-Sabian-AAX.wav
+
+// RACKTOM 1
+<group> group=4 group_label=RackTom1 output=3 key=50 tune=250 volume=-2.83
+<region> sample=TOM2-RR1-StarClassic-10x10.wav
+
+// RACKTOM 2
+<group> group=5 group_label=RackTom2 output=4 key=47 tune=0 volume=-3.04
+<region> sample=TOM2-RR1-StarClassic-10x10.wav
+
+// FLOORTOM
+<group> group=6 group_label=FloorTom output=5 key=41 tune=0 volume=-2.83
+<region> sample=TOM3-RR1-StarClassic-13x13.wav
+
+// CRASH
+<group> group=7 group_label=Crash output=6 key=57 tune=0 volume=0.00
+<region> sample=CRASH-Sabian-18.wav
+
+// RIDE
+<group> group=8 group_label=Ride output=7 key=51 tune=0 volume=0.00 
+<region> sample=RIDE-Robmor-Sabian-22.wav
